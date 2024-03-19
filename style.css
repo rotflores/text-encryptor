@@ -1,0 +1,180 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+body {
+    background-color: #4a044e;
+    color: #fae8ff;
+    font-family: "Roboto", sans-serif;
+
+}
+
+/* header */
+
+.img-logo {
+    width: 75px;
+    height: 75px;
+    margin: 40px 0 0 40px;
+    animation-name: float;   
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+@keyframes float {
+    0% {
+        transform: translatey(-3%);
+    }
+    100% {
+        transform: translatey(7%);
+    }
+}
+
+/* main */
+
+main {
+    display: flex;
+}
+
+.box-input {
+    width: 50%;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 30px;
+    margin: 20px;
+    box-shadow: inset -12px 9px 26px -11px rgba(0,0,0,0.75);
+
+}
+
+.input-text {
+    align-items: center;
+    background-color: #4a044e;
+    color: #fae8ff;
+    font-size: 20px;
+    border: none;
+    resize: none;
+    width: 100%;
+
+}
+
+.input-text:focus {
+    outline: none;
+}
+
+.input-text::placeholder {
+    color: #fae8ff;
+    text-shadow: 4px 2px 5px rgba(0,0,0,0.75);
+}
+
+
+/*button input text*/
+.box-button button {
+    width: 150px;
+    height: 50px;
+    background: #a21caf;
+    color: #fae8ff;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 20px;
+    margin: 40px 20px;
+    box-shadow: -12px 9px 26px -11px rgba(0,0,0,0.75);
+
+}
+
+.box-button button:hover {
+    background: #efe2ef;
+    color: #4a044e;
+}
+
+/*output*/
+
+.box-output {
+    width: 50%;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 30px;
+}
+
+.output-text {
+    align-items: center;
+    background-color: #4a044e;
+    color: #fae8ff;
+    font-size: 20px;
+    border: none;
+    resize: none;
+    width: 60%;
+}
+
+.output-text:focus {
+    outline: none;
+}
+
+/*box-hiden*/
+
+.box-hiden {
+    position: absolute;
+}
+.img-muneco {
+    width: 250px;
+    height: 200px;
+}
+
+.box-hiden p {
+    color: #fae8ff;
+    font-size: 22px;
+    text-align: center;
+    font-weight: bold;
+    margin: 20px;
+    box-shadow: -12px 9px 26px -11px rgba(0,0,0,0.75);
+
+}
+
+/*button output text*/
+.box-button-output button {
+    width: 150px;
+    height: 50px;
+    background: #a21caf;
+    color: #efe2ef;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 20px;
+    margin: 40px 20px 0;
+    box-shadow: -12px 9px 26px -11px rgba(0,0,0,0.75);
+
+}
+
+.box-button-output button:hover {
+    background: #f5d0fe;
+    color: #4a044e;
+}
+
+/*mobile*/
+
+@media (max-width: 440px) {
+
+    main {
+        flex-direction: column;
+    }
+
+    .box-input {
+        width: auto;
+        height: 400px;
+    }
+
+    .box-button, .box-button-output {
+        display: flex;
+        align-items: center;
+    }
+
+    .box-output {
+        width: 100%;
+        height: auto;
+        display: flex;
+        align-items: center;
+        box-sizing: border-box;
+    }
+}
